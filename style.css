@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 5px;
+  }
+
+.grid {
+    border: 1px solid #000;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+
+.squares {
+    display: flex; 
+    flex-basis: calc(25% - 40px);  
+    justify-content: center;
+    flex-direction: column;
+}
