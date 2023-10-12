@@ -7,8 +7,9 @@ html, body {
     border: 1px solid #000;
     min-height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     flex-direction: row;
+    justify-content: center;
 }
 
 
@@ -18,4 +19,5 @@ html, body {
     flex-basis: calc(25% - 40px);  
     justify-content: center;
     flex-direction: column;
+
 }
