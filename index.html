@@ -8,11 +8,37 @@
     <title>Sketchpad</title>
 </head>
 <body>
-    <button type="button" id="resizeButton">RESIZE THE GRID</button>
-
-    <div class="grid">
-
+    
+    <div class="gridContainer">
+      <div class="grid">
+    
+      </div>
     </div>
     
+    <div class="optionContainer">
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="4" class="slider" id="myRange">
+                <div class="sliderValue">
+                    <p>Grid size: <span id="demo"></span></p>
+                </div>
+        </div>
+
+        <div class="optionButtons">
+            <button type="button" id="clearButton">Clear grid</button>
+        </div>
+      
+        
+
+
+
+
+
+    </div>
+
+
+
+
+
+
 </body>
 </html>

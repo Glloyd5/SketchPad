@@ -1,15 +1,26 @@
-html, body {
-    height: 100%;
-    margin: 5px;
+html {
+    background-image: url(./images/background.jpg);
+    background-size: cover;
 }
 
+
+body {
+    height: 100%;
+    margin: 5px; 
+}
+
+.gridContainer {
+    height: 800px;
+    width: 800px;
+    margin: auto;
+    border: 4px solid black;
+}
 
 
 .grid {
     display: grid;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    width: 800px;
+    height: 800px;
     background-color: white;
 }
 
@@ -17,6 +28,65 @@ html, body {
 
 .squares {
     height: 100%;
-    background-color: #ffffff;
+    background-color: #ecdaa8;
     transition: all 0.1s;
 }
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 42%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #97ccce;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #04AA6D;
+    cursor: pointer;
+}
+  
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.slidecontainer,
+.sliderValue {
+    margin: auto;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 1000;
+    color: rgb(138, 9, 143);
+}
+
+.sliderValue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+#clearButton {
+    font-size: 26px;
+    color: rgb(138, 9, 143);
+    background: rgba(0,0,0,0.4); 
+    font-weight: 1000;
+}
+
+#clearButton:hover {
+    background: rgba(0,0,0,0.8); 
+}
+

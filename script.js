@@ -17,32 +17,36 @@ function createGrid (gridSize) {
       })
 }
 
-document.querySelector('#resizeButton').addEventListener('click',() => {
-    let gridSize = prompt('1-100, 64 would make a 64x64 grid.', 64);
-        if(Number(gridSize) < 1 || Number(gridSize) > 100 ) {
-            gridSize = prompt('1-100, Enter a valid input.', 64)
-        }
-        else if(Number(gridSize) == NaN) {
-            gridSize = prompt('1-100, Enter a valid input.', 64)
-        }
-        else {
-            document.querySelectorAll('.squares').forEach(item => {
-                item.remove();
-                });
-              
-            createGrid(gridSize);
-        }   
-        document.querySelectorAll('.squares').forEach(item => {
-            item.addEventListener('mouseover', () => {
-              item.style.backgroundColor = 'black';
-            })
-          })     
+let gridClear = function() {
+  document.querySelectorAll('.squares').forEach(item => {
+    item.style.backgroundColor = '#ecdaa8' 
 });
+}
+
 
 document.querySelectorAll('.squares').forEach(item => {
     item.addEventListener('mouseover', () => {
       item.style.backgroundColor = 'black';
     })
   })
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; 
+  
+  
+slider.oninput = function() {
+output.innerHTML = this.value;
+}
+
+document.querySelector('.slidecontainer').addEventListener('mouseup', () => {
+  gridClear();
+  createGrid(slider.value);
+});
+
+document.getElementById('clearButton').addEventListener('click',() => {
+  gridClear();
+});
+
 
 createGrid(4);
