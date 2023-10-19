@@ -9,6 +9,7 @@ body {
     margin: 5px; 
 }
 
+
 .gridContainer {
     height: 800px;
     width: 800px;
@@ -79,14 +80,29 @@ body {
     gap: 16px;
 }
 
-#clearButton {
+.optionButtons {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+#clearButton,
+#eraserButton,
+#rainbowButton,
+#blackButton {  
     font-size: 26px;
     color: rgb(138, 9, 143);
     background: rgba(0,0,0,0.4); 
     font-weight: 1000;
+    text-align: center;
 }
 
-#clearButton:hover {
+#clearButton:hover,
+#eraserButton:hover,
+#rainbowButton:hover,
+#blackButton:hover {
     background: rgba(0,0,0,0.8); 
 }
 
